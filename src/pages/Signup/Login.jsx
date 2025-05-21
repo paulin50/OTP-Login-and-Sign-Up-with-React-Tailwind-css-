@@ -110,12 +110,13 @@ function Login() {
         <h2 className="text-2xl font-semibold mb-2">Log Into Supaclass</h2>
         <p className="text-sm mb-8 text-neutral-400">
           Don't have an account?{' '}
-          <span 
+          <a
+            href="#" className="underline"
             onClick={handleCreateAccount}
-            className="text-white font-medium hover:underline cursor-pointer"
+            // className="text-white font-medium hover:underline cursor-pointer"
           >
             Create an account
-          </span>
+          </a>
         </p>
 
         <form onSubmit={handleLogin} className="space-y-4">
