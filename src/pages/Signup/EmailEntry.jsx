@@ -162,13 +162,19 @@ export default function EmailEntry() {
     }
   };
 
+  // const handleCreateAccount = ()
+  const handleLogin = () => {
+    navigate('/login'); // Or your actual route for account creation
+  };
+
+
   return (
     <div className="min-h-screen bg-black text-white flex items-center justify-center">
       <div className="w-full max-w-md text-left pl-16">
         <img src={logo} alt="Logo" className="h-10 mb-8" />
         <h1 className="text-2xl font-semibold mb-2">Create an account</h1>
         <p className="text-sm text-gray-400 mb-6">
-          Already have an account? <a href="#" className="underline">Log Into Supaclass</a>
+          Already have an account? <a href="#" className="underline" onClick={handleLogin}>Log Into Supaclass</a>
         </p>
 
         <form onSubmit={handleSubmit}>
