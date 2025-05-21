@@ -13,7 +13,7 @@ const simulateApiDelay = () => new Promise(resolve => setTimeout(resolve, 800));
 
 export const sendVerificationEmail = async (email) => {
   try {
-    const response = await fetch("http://localhost:5000/api/auth/send-verification-email", {
+    const response = await fetch("https://supaclass-otp.onrender.com/api/auth/send-verification-email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -53,7 +53,7 @@ export const verifyEmailOTP = async (email, otp) => {
 
   try {
 
-    const res = await fetch("http://localhost:5000/api/auth/verify-otp", {
+    const res = await fetch("https://supaclass-otp.onrender.com/api/auth/verify-otp", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, otp }),
